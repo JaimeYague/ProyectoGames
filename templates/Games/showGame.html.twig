@@ -1,0 +1,25 @@
+{% extends "Games/baseGame.html.twig" %}
+{% block contenido %}
+<div class="row">
+                    <div class="col text-center"><h2>{{game.name}}</h2>  <h3>{{game.rating}}</h3></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <img src="{{game.image}}">
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">{{game.description}}</div>
+                        </div>
+                        <div class="row">
+                            <ul>
+                               {{game.genre}}
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul>
+                               {{game.developer}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>{% endblock %}

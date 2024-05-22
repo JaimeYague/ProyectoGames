@@ -1,0 +1,23 @@
+
+{% extends "Games/baseGame.html.twig" %}
+
+{% block contenido %}
+
+    <h2>Listado de Juegos </h2>
+    <div class="row row-cols-1 row-cols-md-2">
+        {% for game in games %}
+            
+            <div class="col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{game.image}}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{game.name}}</h5>
+                        <p class="card-text">{{game.description}}</p>
+                        <a href="#" class="btn btn-primary">Más Info</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
